@@ -1,0 +1,18 @@
+﻿@model crudappMvc.Models.Blog
+
+@{
+    ViewBag.Title = "Blog Details";
+}
+
+<h2>Blog Details</h2>
+
+<div class="blog-details">
+    <h3>@Model.Title</h3>
+    <p><strong>Author:</strong> @Model.Author</p>
+    <p><strong>Description:</strong></p>
+    <p>@Model.Description</p>
+
+    <p>
+        <a href="@Url.Action("GetAllBlog")" class="btn btn-primary">Back to List</a>
+    </p>
+</div>

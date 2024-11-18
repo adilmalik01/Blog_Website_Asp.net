@@ -1,0 +1,24 @@
+﻿@model crudappMvc.Models.Blog
+
+<h2>Edit Blog</h2>
+
+<form asp-action="Edit" asp-controller="Blog" method="post">
+    <div>
+        <label for="Title">Title</label>
+        <input type="hidden" asp-for="Id" />
+        <input type="text" asp-for="Title" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Content">Content</label>
+        <textarea asp-for="Description"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Author">Author</label>
+        <textarea asp-for="Author"></textarea>
+        <span asp-validation-for="Author" class="text-danger"></span>
+    </div>
+    <button type="submit">Update Blog</button>
+</form>
